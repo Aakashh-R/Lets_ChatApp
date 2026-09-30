@@ -4,7 +4,8 @@ import jwt from 'jsonwebtoken'
 
 
 export const generateToken=async(userId,res)=>{
-     
+      const {JWT_SECRET_CODE}=process.env
+      if(!JWT_SECRET_CODE) throw new Error("JWT_SECRET_CODE is not configured")
     const token=jwt.sign({userId},process.env.JWT_SECRET_CODE,{expiresIn:"7d"})
 
     res.cookie("jwt",token,{
