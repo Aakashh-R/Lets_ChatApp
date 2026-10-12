@@ -11,8 +11,10 @@ export const ENV={
     EMAIL_FROM_NAME:process.env.EMAIL_FROM_NAME,
     CLOUDINARY_CLOUD_NAME:process.env.CLOUDINARY_CLOUD_NAME,
     CLOUDINARY_API_KEY:process.env.CLOUDINARY_API_KEY,
-    CLOUDINARY_API_Secret:process.env.CLOUDINARY_API_Secret
-
-
+    CLOUDINARY_API_Secret:process.env.CLOUDINARY_API_Secret,
+    ARCJET_API_KEY:process.env.ARCJET_API_KEY,
+    ARCJET_ENV:process.env.ARCJET_ENV
 
 }
+
+
