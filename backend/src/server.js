@@ -6,6 +6,7 @@ import authroutes from './routes/auth.route.js'
 import messageroutes from './routes/message.route.js'
 import path from 'path'
 import {connectDB}from './lib/db.js'
+
 const app=express()
 const _dirname=path.resolve()
 
@@ -14,8 +15,15 @@ app.use(express.json())
 app.use(cookieParser())
 
 
+
+
+
+
 app.use("/api/auth",authroutes)
 app.use('/api/message',messageroutes)
+// app.get("/api/test",(req,res)=>{
+//     return res.status(200).json({message:" testing"})
+// })
 if(process.env.NODE_ENV=="production"){
    
     app.use(express.static(path.join(_dirname,"../frontend/dist")))
