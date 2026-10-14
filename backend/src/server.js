@@ -6,12 +6,14 @@ import authroutes from './routes/auth.route.js'
 import messageroutes from './routes/message.route.js'
 import path from 'path'
 import {connectDB}from './lib/db.js'
-
+import cors from 'cors'
+import {ENV} from './lib/env.js'
 const app=express()
 const _dirname=path.resolve()
 
 const port=process.env.Port||5000
 app.use(express.json())
+app.use(cors({origin:ENV.CLIENT_URL,credentials:true}))
 app.use(cookieParser())
 
 
