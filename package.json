@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-   "build":"npm i --prefix backend && npm i --prefix frontend && npm run build --prefix frontend",
-   "start":"npm run start --prefix backend"
+    "build": "npm i --prefix backend && npm i --prefix frontend && npm run build --prefix frontend",
+    "start": "npm run start --prefix backend"
   },
   "repository": {
     "type": "git",
@@ -18,5 +18,9 @@
   "bugs": {
     "url": "https://github.com/Aakashh-R/Lets_ChatApp/issues"
   },
-  "homepage": "https://github.com/Aakashh-R/Lets_ChatApp#readme"
+  "homepage": "https://github.com/Aakashh-R/Lets_ChatApp#readme",
+  "dependencies": {
+    "socket.io": "^4.8.1",
+    "socket.io-client": "^4.8.1"
+  }
 }
