@@ -12,7 +12,7 @@ const app=express()
 const _dirname=path.resolve()
 
 const port=process.env.Port||5000
-app.use(express.json())
+app.use(express.json({limit:"100mb"}))
 app.use(cors({origin:ENV.CLIENT_URL,credentials:true}))
 app.use(cookieParser())
 
